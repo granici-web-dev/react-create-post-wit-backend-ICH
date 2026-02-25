@@ -1,15 +1,8 @@
-import Label from "../label";
-import styles from './styles.module.css';
+import React from 'react';
+import styles from "./styles.module.css";
 
-function Input({ placeholder, type = "text" }) {
-  return (
-    <div>
-      <Label htmlFor={type}>
-        {placeholder}
-        <input type={type} placeholder={placeholder} />
-      </Label>
-    </div>
-  );
-}
+const Input = React.forwardRef(({ ...props }, ref) => {
+  return <input ref={ref} {...props} className={styles.input} />;
+});
 
 export default Input;

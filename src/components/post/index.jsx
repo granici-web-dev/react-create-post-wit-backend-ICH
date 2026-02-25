@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import PostList from "../postList";
 import styles from './styles.module.css';
+import PostForm from "../postForm";
 
 const BASE_URL = 'https://699eb2fb78dda56d396b07a3.mockapi.io';
 
@@ -30,11 +31,12 @@ function Post() {
   const createPost = async (post) => {
     try {
       const response = await axios.post(`${BASE_URL}/posts`, post);
-      setPosts((prevPosts) => [...prevPosts, response.data]);
+      setPosts((prevPosts) => [response.data, ...prevPosts]);
     } catch (error) {
       console.error('Error creating post:', error);
     }
   }
+  
 
   useEffect(() => {
     getPosts();
@@ -42,7 +44,8 @@ function Post() {
 
   return (
     <div className={styles.post}>
-      <PostList posts={posts} deletePost={deletePost} createPost={createPost} />
+        <PostList posts={posts} deletePost={deletePost} />
+        <PostForm createPost={createPost} />
     </div>
   );
 }

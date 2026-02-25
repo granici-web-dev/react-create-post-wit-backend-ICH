@@ -1,12 +1,8 @@
-import Label from "../label";
-import styles from './styles.module.css';
+import React from 'react';
+import styles from "./styles.module.css";
 
-function TextArea({ placeholder = 'Text content', title = 'Text Content' }) {
-  return (
-    <Label htmlFor={'text'}>{title}
-      <textarea placeholder={placeholder} id={'text'} />
-    </Label>
-  );
-}
+const TextArea = React.forwardRef(({ ...props }, ref) => {
+  return <textarea ref={ref} {...props} className={styles.textArea} />;
+});
 
 export default TextArea;

@@ -1,11 +1,5 @@
-import styles from './styles.module.css';
-
-function Button({ title, onClick, className }) {
-  return (
-    <button onClick={onClick} className={className}>
-      {title}
-    </button>
-  );
+function Button({ title, ...props }) {
+  return <button {...props}>{title}</button>;
 }
 
 export default Button;
