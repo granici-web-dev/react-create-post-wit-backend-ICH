@@ -17,13 +17,34 @@ function Post() {
     }
   }
 
+  const deletePost = async (id) => {
+    console.log('Deleting id:', id);
+    try {
+      await axios.delete(`${BASE_URL}/posts/${id}`);
+      setPosts((prevPosts) => prevPosts.filter((post) => post.id !== id));
+    } catch (error) {
+      console.error('Error deleting post:', error);
+    }
+  };
+
+  const createPost = async (post) => {
+    try {
+      const response = await axios.post(`${BASE_URL}/posts`, post);
+      setPosts((prevPosts) => [...prevPosts, response.data]);
+    } catch (error) {
+      console.error('Error creating post:', error);
+    }
+  }
+
   useEffect(() => {
     getPosts();
   }, []);
 
-  return <div className={styles.post}>
-    <PostList posts={posts} />
-  </div>
+  return (
+    <div className={styles.post}>
+      <PostList posts={posts} deletePost={deletePost} createPost={createPost} />
+    </div>
+  );
 }
 
 export default Post;

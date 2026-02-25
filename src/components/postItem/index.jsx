@@ -2,12 +2,14 @@ import styles from './styles.module.css';
 import Avatar from '../avatar';
 import Button from '../button';
 
-function PostItem({ post }) {
+function PostItem({ post, deletePost }) {
+
+
   return (
     <div className={styles.postItem}>
       <div className={styles.postContent}>
         <div>
-          <Avatar />
+          <Avatar title={'User logo'} />
         </div>
         <div>
           <h2>{post.title}</h2>
@@ -16,7 +18,7 @@ function PostItem({ post }) {
       </div>
       <div className={styles.postActions}>
         <h4>{post.id}</h4>
-        <Button />
+        <Button title={'Delete'} onClick={() => deletePost(post.id)} className={styles.deleteBtn} />
       </div>
     </div>
   );

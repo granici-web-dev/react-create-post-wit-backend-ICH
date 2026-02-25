@@ -1,7 +1,11 @@
 import styles from './styles.module.css';
 
-function Button() {
-  return <button className={styles.deleteBtn}>Delete</button>
+function Button({ title, onClick, className }) {
+  return (
+    <button onClick={onClick} className={className}>
+      {title}
+    </button>
+  );
 }
 
 export default Button;

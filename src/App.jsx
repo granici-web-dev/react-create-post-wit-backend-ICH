@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <div>
+      <div className={'container'}>
         <Post />
         <PostForm />
       </div>

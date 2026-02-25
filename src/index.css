@@ -13,6 +13,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: #96DCFF;
+}
+
 a {
   font-weight: 500;
   color: #090808CC;

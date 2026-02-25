@@ -1,0 +1,19 @@
+.buttonDiv {
+  text-align: right;
+}
+
+.nextBtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #3F5CC0CC;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+}
+
+.nextBtn:hover {
+  background-color: #1E3479;
+  color: #fff;
+  
+}

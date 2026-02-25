@@ -1,0 +1,25 @@
+.form {
+  background-color: #7d9fff;
+  padding: 4.5rem;
+}
+
+.formInner {
+  padding: 2rem;
+  background-color: #3f5cc0cc;
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #21322e21;
+  gap: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.formActions {
+  text-align: right;
+}
