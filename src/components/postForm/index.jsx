@@ -1,5 +1,7 @@
 function PostForm() {
-  return <form></form>
+  return <form>
+    
+  </form>
 }
 
 export default PostForm;

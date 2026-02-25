@@ -1,0 +1,21 @@
+.postItem {
+  background-color: #3F5CC0CC;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postActions {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.postContent {
+  display: flex;
+  gap: 3rem;
+}
