@@ -1,0 +1,12 @@
+.header {
+  padding: 2.5rem 0;
+  background-color: #3F5CC0;
+}
+
+.headerInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
